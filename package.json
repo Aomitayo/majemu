@@ -1,0 +1,15 @@
+{
+  "name": "majemu",
+  "version": "0.0.1",
+  "description": "A tool for testing APIs by specification and by example.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adedayo Omitayo<adedayo.omitayo@flowswift.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^14.3.3"
+  }
+}
