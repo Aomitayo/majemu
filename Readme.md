@@ -14,7 +14,7 @@ examples to test your API.
 
 So for those superheros with such great power that they are charged with the
 great responsiblity of developing APIs without Batman's money and resources,
-This tool will help you ensure that your Api is keeping the covenant, - what
+this tool will help you ensure that your Api is keeping the covenant, - what
 [yoruba people](https://en.wikipedia.org/wiki/Yoruba_people) call Májèmú :).
 
 
@@ -28,23 +28,23 @@ like
 ```
 
 And you want to test that the implementation of the request-response scenario
-beelow is correct.
+below is correct.
 
-Then you would install this package -Hmmpff! like you don't know right?
+Then you would install this package - Humpf! like you don't know right?
 ```
-npm install majemu
+npm install --save-dev majemu
 ```
 
 And then in one of your test files (mocha or jest) you would proceed like so:
 
 ``` javascript
-  //off course you'll import the package
+  //of course you'll import the package
   const majemu = require('majemu')
 
-  //Use this wrapper for a http api you want to test
+  //Use this wrapper for a http API you want to test
   const httpApi = require('majemu/http-api')('https://example.com/basepath')
 
-  //specify the specification and examples and test using the fluent expression
+  //point to the specification and examples, and test using the fluent expression
   majemu()
   .withOpenApi('path/to/openapi.yaml')
   .withExamples('path/to/examples.yaml')
@@ -58,7 +58,7 @@ And then in one of your test files (mocha or jest) you would proceed like so:
   majemu()
   .withOpenApi('path/to/openapi.yaml')
   .withExamples('path/to/examples.yaml')
-  .provideWith('authorization', () => 'base63 encoded authkey perhaps')
+  .provideWith('authorization', () => 'JWT token perhaps')
   .test(myExpressAppApi)
 
   // you can test an AWS lambda function like so
@@ -68,7 +68,7 @@ And then in one of your test files (mocha or jest) you would proceed like so:
   majemu()
   .withOpenApi('path/to/openapi.yaml')
   .withExamples('path/to/examples.yaml')
-  .provideWith('authorization', () => 'base63 encoded authkey perhaps')
+  .provideWith('authorization', () => 'SIG4 authorization key')
   .test(lambdaFunctionApi)
 ```
 And that's it. Your test runner will report either success or let you know the
