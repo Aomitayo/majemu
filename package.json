@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "standard": "^14.3.3"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "yaml": "^1.10.0"
   }
 }
